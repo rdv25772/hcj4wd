@@ -1,0 +1,160 @@
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.75em;
+  width: 100%;
+  color: black;
+}
+
+h2 {
+  margin: 0px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.75em;
+  width: 100%;
+}
+
+h3 {
+  margin: 5px;
+  margin-bottom: 15px;
+  text-align: center;
+  font-size: 1.5em;
+  width: 100%;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: grey;
+  border-radius: 0;
+  border: 2px solid black;
+}
+
+.navbar-brand {
+  height: 80px;
+}
+
+.navbar-brand h1 { /* Restaurant name */
+  font-size: 2em;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #222;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+  padding-top: 10px;
+}
+.navbar-brand a:hover, .navbar-brand a:focus {
+  text-decoration: none;
+}
+
+#nav-list {
+  margin: 0px;
+  width:  100%;
+}
+#nav-list a {
+  text-align: center;
+  font-size: 1.8em;
+  margin: 0px;
+  color: black;
+}
+#nav-list a:hover {
+  color: black;
+}
+#nav-list li {
+  margin: 0px;
+  border: 1px solid black;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 1px solid black;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -50px;
+}
+/* END HEADER */
+
+.cell {
+  border: 1px solid black;
+  margin: 10px;
+  padding: 0px;
+  background-color: grey;
+  position: relative;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+}
+
+/* Simple Responsive Framework. */
+.row {
+  width: 100%;
+  position: relative;
+}
+
+/********** Desktop devices only **********/
+@media (min-width: 992px) {
+	#collapsable-nav, #nav-list {
+		visibility: hidden;
+		height: 0px;
+	}
+
+  .container {
+  	margin: 0px;
+  	padding: 0px;
+  }
+   .navbar-header {
+    padding: 0px  15px;
+  }
+}
+
+/********** Tablet devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	#collapsable-nav, #nav-list {
+		visibility: hidden;
+		height: 0px;
+	}
+
+  .container {
+  	margin: 0px;
+  	padding: 0px;
+  }
+  .navbar-header {
+    padding: 0px  15px;
+  }
+}
+
+/********** Mobile devices only **********/
+@media (max-width: 767px) {
+  /* Header */
+  .navbar-brand { 
+    padding-top: 10px;
+    height: 80px;
+  }
+  .navbar-brand h1 { 
+    padding-top: 10px;
+    font-size: 5vw; /* 1vw = 1% of viewport width */
+  }
+  .navbar-header {
+    padding: 0px  15px;
+  }
+
+  #collapsable-nav a { /* Collapsed nav menu text */
+    width: 100%;
+  	font-size: 1.2em;
+  	background-color: white;
+  	margin: 0px;
+  	padding: 0px;
+  }
+
+  .container {
+  	margin: 0px;
+  	padding: 0px;
+  }
+  /* End Header */
+
+}
